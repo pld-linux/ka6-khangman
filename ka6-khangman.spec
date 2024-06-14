@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.0
+%define		kdeappsver	24.05.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		khangman
 Summary:	khangman
 Name:		ka6-%{kaname}
-Version:	24.05.0
+Version:	24.05.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	18e70fd5eefeeb9d16f192738bf0089e
+# Source0-md5:	89b013fd9e1f9bf07b98e37eed49d14c
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -45,6 +45,7 @@ BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	%{name}-data = %{version}-%{release}
+Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -63,6 +64,7 @@ kończy i wyświetlana jest prawidłowa odpowiedź.
 Summary:	Data files for %{kaname}
 Summary(pl.UTF-8):	Dane dla %{kaname}
 Group:		X11/Applications/Games
+Obsoletes:	ka5-%{kaname}-data < %{version}
 BuildArch:	noarch
 
 %description data
