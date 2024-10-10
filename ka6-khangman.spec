@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.1
+%define		kdeappsver	24.08.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		khangman
 Summary:	khangman
 Name:		ka6-%{kaname}
-Version:	24.08.1
+Version:	24.08.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e192090ea95c42695f49d7f866003781
+# Source0-md5:	6f47e6102df4189d27d44948e909e51a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -124,5 +124,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv) %{_mandir}/sv/man6/khangman.6*
 %lang(uk) %{_mandir}/uk/man6/khangman.6*
 %lang(fr) %{_mandir}/fr/man6/khangman.6*
+%lang(sl) %{_mandir}/sl/man6/khangman.6*
 %{_datadir}/metainfo/org.kde.khangman.appdata.xml
 %{_datadir}/knsrcfiles/khangman.knsrc
